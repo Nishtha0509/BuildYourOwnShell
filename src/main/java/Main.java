@@ -33,6 +33,10 @@ public class Main {
                     break;
                 }
                 else if(cmd.equals("echo")){
+                    if(param.startsWith("\'")){
+                        System.out.println("here");
+                        param = param.replaceAll("\'","");
+                    }
                     System.out.println(param);
                 }
                 else if(cmd.equals("type")){
